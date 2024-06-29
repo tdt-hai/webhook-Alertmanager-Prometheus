@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
+const validate = require('../middleware/validate')
+const schemas = require('../schemas/prometheus.json')
+
 const Function = require('../services/function')
 
 /* webhook. */
 router.get('/', async function (req, res, next) {
   res.status(200).send({ "message": "Ok" })
 });
-router.post('/', async function (req, res, next) {
+router.post('/',validate(schemas),async function (req, res, next) {
   const body = req.body //get body from prometheus
   const header = req.headers.authorization //get header bearer token line from webhook
   try{

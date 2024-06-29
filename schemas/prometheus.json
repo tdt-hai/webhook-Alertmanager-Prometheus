@@ -1,0 +1,138 @@
+{
+    "type": "object",
+    "properties": {
+        "receiver": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "alerts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    },
+                    "labels": {
+                        "type": "object",
+                        "properties": {
+                            "alertname": {
+                                "type": "string"
+                            },
+                            "instance": {
+                                "type": "string"
+                            },
+                            "job": {
+                                "type": "string"
+                            },
+                            "severity": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "alertname",
+                            "instance",
+                            "job",
+                            "severity"
+                        ]
+                    },
+                    "annotations": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "title"
+                        ]
+                    },
+                    "startsAt": {
+                        "type": "string"
+                    },
+                    "endsAt": {
+                        "type": "string"
+                    },
+                    "generatorURL": {
+                        "type": "string"
+                    },
+                    "fingerprint": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "status",
+                    "labels",
+                    "annotations",
+                    "startsAt",
+                    "endsAt",
+                    "generatorURL",
+                    "fingerprint"
+                ]
+            }
+        },
+        "groupLabels": {
+            "type": "object",
+            "properties": {
+                "alertname": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "alertname"
+            ]
+        },
+        "commonLabels": {
+            "type": "object",
+            "properties": {
+                "alertname": {
+                    "type": "string"
+                },
+                "job": {
+                    "type": "string"
+                },
+                "severity": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "alertname",
+                "job",
+                "severity"
+            ]
+        },
+        "commonAnnotations": {
+            "type": "object"
+        },
+        "externalURL": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "groupKey": {
+            "type": "string"
+        },
+        "truncatedAlerts": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "receiver",
+        "status",
+        "alerts",
+        "groupLabels",
+        "commonLabels",
+        "commonAnnotations",
+        "externalURL",
+        "version",
+        "groupKey",
+        "truncatedAlerts"
+    ]
+}
