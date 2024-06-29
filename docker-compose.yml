@@ -1,0 +1,13 @@
+version: "3"
+services:
+  webhook:
+    image: webhook:v1
+    hostname: webhook
+    container_name: webhook
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+      - PORT=3000
+      - HOST=localhost
+    restart: always
+    ports:
+      - "3000:3000"

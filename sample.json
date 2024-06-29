@@ -1,0 +1,36 @@
+{
+    "receiver": "test",
+    "status": "firing",
+    "alerts": [
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "VM DOWN",
+                "instance": "test",
+                "job": "vm down",
+                "severity": "critical"
+            },
+            "annotations": {
+                "description": "Server localhost:9100 is down",
+                "title": "Server localhost:9100 is down"
+            },
+            "startsAt": "2024-05-29T02: 44: 18.578723511Z",
+            "endsAt": "0001-01-01T00: 00: 00Z",
+            "generatorURL": "http: //localhost:29090/graph?g0.expr=%28round%28%28",
+            "fingerprint": "76e268a83294fc63"
+        }
+      ],
+    "groupLabels": {
+        "alertname": "VM DOWN"
+    },
+    "commonLabels": {
+        "alertname": "VM DOWN",
+        "job": "vm down",
+        "severity": "critical"
+    },
+    "commonAnnotations": {},
+    "externalURL": "http://localhost:9095",
+    "version": "4",
+    "groupKey": "{}/{severity=~\"critical\"}:{alertname=\"VM DOWN\"}",
+    "truncatedAlerts": 0
+}
